@@ -19,6 +19,15 @@ namespace WebServiceSOAP
     {
 
         [WebMethod]
+        public List<DTO.Producao> Plano_de_Producao(string WorkCenter,string date)
+        {
+
+            return new List<Producao>()
+            {
+                new Producao(){Start = new DateTime(2023, 02, 15, 06, 15, 00), End = new DateTime(2023, 02, 15, 06, 30, 00),Objetivo="130",Ordem="123",Turno=1,WorkCenter="1",_Produto= new Produto(){Cyclo=new TimeSpan(00,00,45),Nome="Produto A",Referencia="12345"} }
+            };
+        }
+        [WebMethod]
         public List<DTO.PecasBoas> Pecas_Boas(string WorkCenter)
         {
 
